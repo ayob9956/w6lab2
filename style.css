@@ -2,6 +2,18 @@ body{
     margin: 0px;
     padding: 0px;
 }
+.hide{
+    display: none !important;
+}
+#items{
+    display: none;
+}
+.form-signin{
+    height:73vh ;
+}
+.signInForm{
+    height: 70hv;
+}
 .card {
     box-shadow: 3px 2px 2px 0 rgba(0,0,0,0.2);
     background-color: rgba(207, 198, 186, 0.094);
