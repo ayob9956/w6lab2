@@ -37,20 +37,30 @@ getfach();
 
 
 
-let signInForm = document.getElementById("signInForm");
+let signInForm = document.getElementById("signup");
 let inputName = document.getElementById("floatingInputName");
 let inputEmail = document.getElementById("floatingInputEmail");
 let inputPassword = document.getElementById("floatingPassword");
 
 signInForm.addEventListener("click", function(event) {//event obj it predifined in addEventListener and we have event loop!! search for it!!
-    console.log(event.target);
+
     
         event.preventDefault();
     let name = inputName.value;
     let email = inputEmail.value;
     let password = inputPassword.value;
-    console.log("Hello")
-    postRegistrationData(name, email, password);
+    console.log( password);
+    console.log(    password.includes(''))
+    if (name.length>5 && password.length>8 && !password.includes(" ")) {
+        postRegistrationData(name, email, password);
+    }else{
+        let error = document.createElement("div");
+        signInForm.insertAdjacentElement("afterend",error)
+                error.innerText = "YOur Login is filled check your date"
+                error.style.backgroundColor="red"
+                error.classList.add("mt-3")
+    }
+    
     
     
 
